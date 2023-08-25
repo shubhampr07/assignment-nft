@@ -25,6 +25,8 @@ import { FiMenu, FiSearch } from "react-icons/fi";
 import { useThrottle } from "../hooks/useThrottle";
 import { Footer } from "./Footer";
 import { Product } from "./Product";
+import { ConnectButton } from '@rainbow-me/rainbowkit';
+
 const LinkItems = [
   { name: "Token Address", icon: "/token.svg" },
   { name: "Pair Address" , icon: "/fluentpair.svg" },
@@ -212,19 +214,8 @@ const MobileNav = ({ onOpen, sendQuery, ...rest }) => {
           </InputGroup>
         </Box>
         <Box alignItems={"center"}>
-          <Button
-            bg="#F30050"
-            color="black"
-            fontFamily={"Poppins"}
-            fontSize={"16px"}
-            width={"160px"}
-            height={"50px"}
-            borderRadius={"20px"}
-            fontWeight={"400"}
-            onClick={handleClick}
-          >
-            Connect
-          </Button>
+          
+            <ConnectButton />
         </Box>
       </Flex>
       <Box display={{ base: "block", md: "none" }} w={"80%"} m={"20px auto"}>
